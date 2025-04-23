@@ -6,27 +6,69 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  /* background color */
+  --color-bg: #f0f0f0;
+
+  /* BASE COLORS (Використовуйте цей набір кольорів
+  при написанні своєї частини. Пишемо світлу тему, 
+  темна при цьому буде вмикатись автоматично
+  при додаванні класу .dark до body).
+  приклад використання кольору:
+  .button-close {
+  background-color: var(--accet-green);
+  }
+   */
+  --black: #292929;
+  --accet-green: #00b068;
+  --white: #f0f0f0;
+  --light-grey: #e4e5e6;
+  --light-accet: #bcdfd1;
+  --hover-green: #009156;
+  --error: #e74a3b;
+  --hover-grey: #bbbbbb;
+
+  /* base dark-theme colors - це кольори для темної теми, їх пропускаємо*/
+  --black-dt: #1e2023;
+  --accet-green-dt: #14c57c;
+  --white-dt: #f0f0f0;
+  --charcoal-dt: #2a2d32;
+  --dark-accet-dt: #204136;
+  --hover-dt: #009156;
+  --hover-charcoal-dt: #3b3f45;
+}
+
+.dark {
+  --color-bg: #292929;
+  --black: var(--black-dt);
+  --accet-green: var(--accet-green-dt);
+  --white: var(--white-dt);
+  --light-grey: var(--charcoal-dt);
+  --light-accet: var(--dark-accet-dt);
+  --hover-green: var(--hover-dt);
+  --hover-grey: var(--hover-charcoal-dt);
+}
+
+@font-face {
+  font-family: 'impact';
+  src: url('../public/fonts/impact.ttf') format('truetype');
 }
 
 body {
+  font-family: impact, sans-serif;
   display: flex;
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
+  background-color: var(--color-bg);
 }
 
 main {
   flex-grow: 1;
-}
-main:has(.back-link) {
-  text-align: center;
 }
