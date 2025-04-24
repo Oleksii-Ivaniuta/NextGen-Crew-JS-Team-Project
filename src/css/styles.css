@@ -20,35 +20,3 @@
 @import url('./reviews.css');
 @import url('./work-together.css');
 @import url('./footer.css');
-
-.a {
-  background-color: var(--accet-green);
-}
-
-.b {
-  background-color: var(--black);
-}
-.c {
-  background-color: var(--error);
-}
-.d {
-  background-color: var(--hover-green);
-}
-.e {
-  background-color: var(--hover-grey);
-}
-.f {
-  background-color: var(--light-accet);
-}
-.g {
-  background-color: var(--light-grey);
-}
-.h {
-  background-color: var(--white);
-}
-
-.test {
-  background-color: #fff;
-  margin: 24px auto;
-  padding: 24px;
-}
