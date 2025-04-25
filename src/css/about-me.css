@@ -160,4 +160,45 @@
 }
 
 .about-me-bg-cont {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-bg-cont::after {
+    content: '';
+    position: absolute;
+    width: 336px;
+    height: 252px;
+    background-image: url('../img/about-me/about-me-bg-tab.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -264px;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .about-me-bg-cont::after {
+    background-image: url('../img/about-me/about-me-bg-tab@2x.webp');
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-me-bg-cont::after {
+    content: '';
+    position: absolute;
+    width: 384px;
+    height: 288px;
+    background-image: url('../img/about-me/about-me-bg-desk.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -328px;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-resolution: 192dpi) {
+  .about-me-bg-cont::after {
+    background-image: url('../img/about-me/about-me-bg-desk@2x.webp');
+  }
 }
