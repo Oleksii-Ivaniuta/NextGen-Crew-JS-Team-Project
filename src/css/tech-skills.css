@@ -1,3 +1,40 @@
-.tech-skills {
-  color: blueviolet;
+body {
+  margin: 0;
+  font-family: 'Pridi', sans-serif;
+  background-color: #f8f8f8;
+}
+
+.marquee {
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 30px;
+  text-transform: uppercase;
+  background-color: #cdeee3;
+  color: #004d40;
+  padding: 20px 0;
+  border-bottom: 2px solid #00a57e;
+}
+
+.marquee--1 {
+  border-top: 2px solid #00a57e;
+}
+
+.marquee__inner {
+  display: flex;
+  white-space: nowrap;
+}
+
+.marquee__line {
+  display: inline-block;
+  padding-right: 100%;
+  animation: scrollRight 15s linear infinite;
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
