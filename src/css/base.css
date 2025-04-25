@@ -64,7 +64,7 @@
 
 .dark {
   --color-bg: #292929;
-  --black: var(--black-dt);
+  --black: var(--white-dt);
   --accet-green: var(--accet-green-dt);
   --white: var(--white-dt);
   --light-grey: var(--charcoal-dt);
