@@ -1,3 +1,16 @@
-.my-projects {
-  color: brown;
+/* Mobile */
+
+.project-icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--accet-green); /* Ваш акцентний колір */
+}
+
+.projects {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.projects-title {
+  margin-bottom: 40 px;
 }
