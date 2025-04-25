@@ -13,6 +13,18 @@
   }
 }
 
+.about-me-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: var(--black);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  font-family: var(--font-family);
+}
+
 .about-me-header {
   font-family: var(--second-family);
   font-weight: 400;
@@ -20,6 +32,7 @@
   line-height: 123%;
   letter-spacing: 0.03em;
   color: var(--black);
+  margin-bottom: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -35,12 +48,49 @@
 }
 
 .about-me-picture-container {
+  border-radius: 16px;
+  overflow: hidden;
+  width: 320px;
 }
 
 .about-me-descr-cont {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .about-me-h3 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-picture-container {
+    width: 336px;
+  }
+  .about-me-descr-cont {
+    width: 336px;
+  }
+  .about-me-h3 {
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: 0.01em;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-me-picture-container {
+    width: 384px;
+  }
+  .about-me-descr-cont {
+    width: 384px;
+  }
+  .about-me-bio {
+    width: 488px;
+  }
 }
 
 .about-me-article {
