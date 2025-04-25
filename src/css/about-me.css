@@ -1,10 +1,37 @@
 .about-me-section {
+  margin: 40px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-section {
+    margin: 62px 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-me-section {
+    margin: 82px 0;
+  }
 }
 
 .about-me-header {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 123%;
+  letter-spacing: 0.03em;
+  color: var(--black);
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-header {
+    font-size: 108px;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+  }
 }
 
 .about-me-span-me {
+  color: var(--accet-green);
 }
 
 .about-me-picture-container {
@@ -23,4 +50,7 @@
 }
 
 .about-me-li {
+}
+
+.about-me-bg-cont {
 }
