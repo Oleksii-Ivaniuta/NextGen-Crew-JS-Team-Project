@@ -13,10 +13,21 @@ function setLightTheme() {
     refs.body.classList.remove("dark");
     console.log('set light theme');
 }
+// кнопка авто теми увімкнена
+function autoThemeBtnActive() {
+    refs.autoThemeBtn.style.color = "#f0f0f0";
+    refs.autoThemeBtn.style.background = "var(--accet-green)";
+}
+// кнопка авто теми вимкнена
+function autoThemeBtnNotActive() {
+    refs.autoThemeBtn.style.color = "#00b068";
+    refs.autoThemeBtn.style.background = "#bbbbbb";
+}
 
-// функція переключення теми за допомогою кнопки в хедері (її потрібно повісити на слухач подій на цю кнопку);
+// функція переключення теми за допомогою кнопки toggle;
 export function toggleTheme() {
     refs.body.classList.toggle("dark");
+    autoThemeBtnNotActive();
     if (refs.body.classList.contains("dark")) {
         saveToLocalStorage('theme', 'dark');
     }
@@ -26,10 +37,11 @@ export function toggleTheme() {
     console.log(`toggle theme`);
 }
 
-// функція яка повертає до автоматичного вибору теми залежно від часу доби (повісити на слухач подій спеціальної кнопки, якщо така буде);
+// функція яка повертає до автоматичного вибору теми залежно від часу доби за допомогою кнопки auto;
 export function setAutoTheme() {
     removeFromLocalStorage('theme');
     setThemeByTime();
+    autoThemeBtnActive();
 }
 
 // функція встановлення теми за часом доби;
@@ -48,9 +60,11 @@ function setThemeByTime() {
 function setTheme() {
     if (loadFromLocalStorage('theme') === 'light') {
         setLightTheme();
+        autoThemeBtnNotActive();
     }
     else if (loadFromLocalStorage('theme') === 'dark') {
         setDarkTheme();
+        autoThemeBtnNotActive();
     }
     else {
         setThemeByTime();
@@ -58,6 +72,11 @@ function setTheme() {
 }
 
 
+
 // запуск функції встановлення теми, спрацьовує при кожному завантаженні сторінки;
 setTheme();
 
+
+
+refs.toggleThemeBtn.addEventListener("click", toggleTheme);
+refs.autoThemeBtn.addEventListener("click", setAutoTheme);
