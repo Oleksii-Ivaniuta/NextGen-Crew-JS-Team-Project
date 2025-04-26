@@ -1,5 +1,5 @@
 export const refs = {
     body: document.querySelector('body'),
-    autoThemeBtn: document.querySelector('.theme-auto-set-btn'),
-    toggleThemeBtn: document.querySelector('.theme-toggle-btn'),
+    autoThemeBtn: document.querySelectorAll('.theme-auto-set-btn'),
+    toggleThemeBtn: document.querySelectorAll('.theme-toggle-btn'),
 };
