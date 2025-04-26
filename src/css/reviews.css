@@ -1,3 +1,79 @@
-.reviews {
-  color: aquamarine;
+.reviews-section {
+  padding: 40px 20px;
+}
+.reviews-header{
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 123%;
+  letter-spacing: 0.03em;
+  color: var(--black);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .reviews-header {
+    font-size: 108px;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+  }
+}
+.swiper-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column; /* Размещаем элементы вертикально */
+  justify-content: space-between; /* Разделяем контент внутри слайда */
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: var(--light-grey);
+  color:var(--black);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+}
+
+.reviews-article {
+  flex-grow: 1;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: 300;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.5px;
+height:96px;
+overflow: hidden;
+}
+
+.swiper-slide img {
+  margin-right: 15px;
+}
+
+.swiper-slide h3 {
+  font-size: 16px;
+}
+
+
+button {
+  margin: 10px;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button.disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }
