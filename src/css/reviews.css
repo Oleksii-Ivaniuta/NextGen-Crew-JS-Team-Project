@@ -64,16 +64,62 @@ overflow: hidden;
 }
 
 
-button {
-  margin: 10px;
-  padding: 10px;
-  background: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+/* Общая обертка для списка и навигации */
+.reviews-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
-button.disabled {
-  background: #ccc;
-  cursor: not-allowed;
+/* Навигация под списком */
+.reviews-navigation {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+/* Сами кнопки */
+.swiper-button-prev,
+.swiper-button-next {
+  position: static;
+  width: 40px;
+  height: 40px;
+  background: #333; /* Начальный цвет фона */
+  border: var(--black) 1px solid;
+  border-radius: 8px;
+  color: var(--black);
+  transform: none;
+  margin: 0;
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transition: background-color 0.3s, color 0.3s; /* Плавное изменение фона */
+}
+
+/* Когда кнопки неактивны, фон становится зеленым */
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  background-color: #28a745; /* Зеленый фон для неактивных кнопок */
+  border: var(--black) 1px solid; /* Можно также оставить или изменить границу */
+  color: #fff; /* Белый цвет текста */
+}
+
+/* Логика для левой кнопки (←) */
+.swiper-button-prev::after {
+  content: '←'; /* Левая стрелка */
+  font-size: 20px;
+  color: var(--black);
+}
+
+/* Логика для правой кнопки (→) */
+.swiper-button-next::after {
+  content: '→'; /* Правая стрелка */
+  font-size: 20px;
+  color: var(--black);
+}
+
+/* Скрытие кнопок при неактивности */
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  display:none;
 }
