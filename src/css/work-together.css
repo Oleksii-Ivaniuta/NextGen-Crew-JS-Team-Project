@@ -1,3 +1,136 @@
-.work-together {
-  color: brown;
+.work-together-container{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.work-together-title{
+  font-family: var(--second-family);
+font-weight: 400;
+font-size: 52px;
+line-height: 123%;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--black);
+}
+
+.work-together-span{
+  color: var(--accet-green);
+}
+
+.work-together-par{ padding-top: 40px;
+  font-family: var(--font-family);
+font-weight: 400;
+font-size: 18px;
+line-height: 156%;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--black);
+}
+
+
+.work-together-address{
+  padding-top: 32px;
+  
+}
+
+.work-together-ul{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+
+}
+
+.work-together-svg{
+  fill: var(--accet-green);
+}
+
+
+.work-together-modal-form{
+  padding-top: 40px;
+}
+
+.work-together-form{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: flex-start;
+  width: 100%;
+  position: relative;
+}
+
+.work-together-input{
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  height: 48px;
+  background-color: var(--light-grey);
+}
+
+.work-together-message{
+  border-radius: 8px;
+  height: 128px;
+}
+
+.work-together-button{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--white);
+  border-radius: 8px;
+  border: none;
+  padding: 12px 24px;
+  width: 100%;
+  height: 48px;
+  background-color: var(--accet-green);
+}
+
+.work-together-button:hover{
+  background-color: var(--hover-green);
+}
+
+
+
+@media screen and (min-width: 768px) {
+  
+  .work-together-title{
+    font-size: 108px;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+  }
+  
+  .work-together-par{
+      font-size: 20px;
+      line-height: 160%;
+      padding-top: 60px;
+    }
+  
+  .work-together-button{
+    width: 173px;
+  }
+
+  .work-together-ul {
+    flex-direction: row;
+}
+  .work-together-modal-form{
+    padding-top: 60px;
+}
+
+}
+
+
+@media screen and (min-width: 1280px) {
+
+  .work-together-input{
+    width: 592px;
+    }
+
+  
+  
 }

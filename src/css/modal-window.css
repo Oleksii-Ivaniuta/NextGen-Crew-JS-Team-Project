@@ -1,0 +1,69 @@
+.work-together-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    opacity: 0.8;
+}
+
+.work-together-modal-content {
+    background-color: var(--white);
+    border: 1px solid var(--light-grey);
+    margin: 15% auto;
+    padding: 48px 32px;
+    border-radius: 16px;
+    width: 320px;
+    height: 328px;
+    position: relative;
+    
+}
+
+.work-together-close-modal {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.success-modal .work-together-modal-content {
+    border-top: 4px solid var(--accet-green);;
+}
+
+.error-modal .work-together-modal-content {
+    border-top: 4px solid var(--error);}
+
+.work-together-modal-par{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--accet-green);
+}
+
+.work-together-modal-par-par{
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--black);
+    padding-top: 16px;
+}
+
+@media screen and (min-width: 768px){
+.work-together-modal-content{
+    padding: 64px;
+    width: 492px;
+    height: 280px;
+}
+}
+
