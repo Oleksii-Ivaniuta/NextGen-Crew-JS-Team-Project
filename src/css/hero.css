@@ -1,50 +1,7 @@
-body.dark {
-  &.dark {
-    .hero {
-      background-color: var(--black);
-    }
-
-    .hero--title {
-      color: var(--white);
-    }
-
-    .hero--link {
-      color: var(--white);
-    }
-
-    .hero--text {
-      color: var(--white);
-    }
-
-    .hero--title-sub {
-      color: var(--accet-green);
-    }
-
-    .hero--links-bar {
-      background-color: var(--charcoal);
-    }
-
-    .hero--socials-links {
-      color: var(--white);
-    }
-
-    .hero--socials-links:hover {
-      color: var(--accet-green);
-    }
-
-    .hero--btn::after {
-      background-color: var(--hover-green);
-    }
-
-    .hero--btn:hover::after {
-      background-color: var(--accet-green);
-    }
-  }
-}
 
 .hero {
   position: relative;
-  background-color: var(--white);
+ 
   z-index: 1;
 }
 
@@ -52,32 +9,27 @@ body.dark {
   padding: 0;
 }
 
-.container {
-  min-width: 320px;
+.hero>.container {
+  box-sizing: border-box;
   max-width: 360px;
   padding: 0 20px;
 
-  @media only screen and (min-width: 768px) {
-    max-width: 768px;
-    padding: 0 32px;
-  }
-
-  @media only screen and (min-width: 1280px) {
-    max-width: 1280px;
-  }
-}
-
-.hero>.container {
   padding-top: 112px;
   position: relative;
 
   @media screen and (width >=768px) {
+    max-width: 768px;
+    padding: 0 32px;
     padding-top: 88px;
+  }
+
+  @media only screen and (width >=1280px) {
+    max-width: 1280px;
   }
 }
 
 .hero--title {
-  font-family: 'Impact', sans-serif;
+  font-family: var(--second-family);
   font-weight: 400;
   font-size: 64px;
   line-height: 1.25;
@@ -88,13 +40,13 @@ body.dark {
   transition: all 200ms ease-in-out;
 
   @media screen and (width >=768px) {
-    font-size: 136px;
+    font-size: 124px;
     line-height: 1.14706;
     letter-spacing: 0.01em;
   }
 
   @media screen and (width >=1280px) {
-    width: 600px;
+    max-width: 552px;
   }
 }
 
@@ -104,7 +56,6 @@ body.dark {
 
 .hero--wrapper {
   display: flex;
-  justify-content: center;
   margin-bottom: 72px;
 
   @media screen and (width >=768px) {
@@ -114,12 +65,15 @@ body.dark {
   @media screen and (width >=1280px) {
     margin-bottom: 80px;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
 .hero--wrapper>img {
+  display: flex;
+  max-height: 444px;
+
   @media screen and (width <=1280px) {
-    justify-content: space-between;
     display: none;
   }
 }
@@ -154,34 +108,49 @@ body.dark {
   background: none;
   border: none;
 
+
   &::after {
     position: absolute;
-    left: 151px;
+    left: 131px;
     top: -32px;
     content: '';
     display: block;
     border-radius: 16px;
     width: 176px;
     height: 92px;
-    background-color: var(--light-accent);
+    background-color: var(--light-accet);
     z-index: -1;
     transition: all 200ms ease-in-out;
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:focus-within::after {
     background: var(--accet-green);
   }
 
-  &:hover .hero--icon {
+  &:hover .hero--icon,
+  &:focus-within .hero--icon {
     animation: btn-swipe 1200ms linear infinite;
   }
 
-  &:hover .hero--link {
-    translate: 118px;
+  &:hover .hero--link,
+  &:focus-within .hero--link {
+    translate: 98px;
     color: var(--white);
 
+    @media screen and (width < 360px) {
+      translate: 78px;
+    }
+
     @media screen and (width >=768px) {
-      translate: 140px;
+      translate: 120px;
+    }
+  }
+
+  @media screen and (width < 360px) {
+    &::after {
+      left: 101px;
+      width: 156px;
     }
   }
 
@@ -203,7 +172,7 @@ body.dark {
 }
 
 .hero--link {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
 
@@ -214,6 +183,10 @@ body.dark {
 
   transition: all 300ms linear;
 
+  @media screen and (width < 360px) {
+    font-size: 12px;
+  }
+
   @media screen and (width >=768px) {
     font-size: 20px;
     line-height: 1.6;
@@ -221,10 +194,10 @@ body.dark {
 }
 
 .hero--text {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
-  width: 320px;
+  max-width: 320px;
   line-height: 1.55556;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -233,11 +206,11 @@ body.dark {
   @media screen and (width >=768px) {
     font-size: 20px;
     line-height: 1.6;
-    width: 704px;
+    max-width: 704px;
   }
 
   @media screen and (width >=1280px) {
-    width: 597px;
+    max-width: 597px;
   }
 }
 
@@ -267,7 +240,7 @@ body.dark {
 }
 
 .hero--socials-links {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
   font-weight: 300;
   font-size: 16px;
 
@@ -277,7 +250,8 @@ body.dark {
 
   transition: all 300ms ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     color: var(--accet-green);
   }
 }

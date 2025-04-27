@@ -4,10 +4,10 @@
       >Lloyd<span class="header--logo-sub">Jefferson.</span></a
     >
     <nav>
-      <label class="header--toggle">
-        <input type="checkbox" id="theme-switcher" />
-        <span class="header--slider"> </span>
-      </label>
+      <div class="theme-btn-container">
+        <button class="theme-auto-set-btn" type="button">A</button>
+        <button class="theme-toggle-btn" type="button">M</button>
+      </div>
       <ul class="header--nav-list">
         <li class="header--nav--list-item">
           <a href="#about-me" class="header--nav--list-link">About me</a>
@@ -25,8 +25,8 @@
       class="header--open-menu"
       aria-label="open menu button"
     >
-      <svg class="header--burger-icon" width="32" height="32">
-        <use href="../img/sprite.svg#icon-Vector"></use>
+      <svg class="header--burger-icon" data-menu-open width="32" height="32">
+        <use href="/img/sprite.svg#icon-Vector"></use>
       </svg>
     </button>
   </div>
