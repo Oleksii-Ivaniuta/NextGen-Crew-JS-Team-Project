@@ -30,7 +30,7 @@ body {
 }
 
 /* Появление меню */
-.mobile-menu.open {
+.mobile-menu.is-open {
   display: flex;
 }
 
