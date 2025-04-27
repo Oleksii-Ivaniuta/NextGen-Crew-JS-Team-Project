@@ -4,6 +4,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const errorModal = document.getElementById('errorModal');
     const errorMessage = document.getElementById('errorMessage');
     const closeButtons = document.querySelectorAll('.work-together-close-modal');
+    const body = document.body;
+
+    function closeAllModals() {
+        successModal.style.display = 'none';
+        errorModal.style.display = 'none';
+        body.style.overflow = 'auto'; 
+    }
+
+    function openModal(modal) {
+        modal.style.display = 'block';
+        body.style.overflow = 'hidden'; 
+    }
+
+    function handleKeyDown(e) {
+        if (e.key === 'Escape') {
+            closeAllModals();
+        }
+    }
+
+    document.addEventListener('keydown', handleKeyDown);
 
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -28,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const result = await response.json();
                 console.log('Успешный ответ:', result);
                 form.reset();
-                successModal.style.display = 'block';
+                openModal(successModal);
             } else {
                 const errorData = await response.json();
                 throw new Error(errorData.message || `Ошибка сервера: ${response.status}`);
@@ -36,26 +56,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
         } catch (error) {
             console.error('Ошибка запроса:', error);
-            showError(error.message || 'Ошибка сети. Пожалуйста, проверьте соединение.');
+            errorMessage.textContent = error.message || 'Ошибка сети. Пожалуйста, проверьте соединение.';
+            openModal(errorModal);
         }
     });
 
-    function showError(message) {
-        errorMessage.textContent = message;
-        errorModal.style.display = 'block';
-    }
-
     closeButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            successModal.style.display = 'none';
-            errorModal.style.display = 'none';
-        });
+        button.addEventListener('click', closeAllModals);
     });
 
     window.addEventListener('click', function(event) {
         if (event.target === successModal || event.target === errorModal) {
-            successModal.style.display = 'none';
-            errorModal.style.display = 'none';
+            closeAllModals();
         }
     });
 });
