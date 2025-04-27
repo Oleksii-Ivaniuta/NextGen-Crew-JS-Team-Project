@@ -1,30 +1,32 @@
 .work-together-container{
   margin-top: 40px;
   margin-bottom: 40px;
+  position: relative;
 }
 
 .work-together-title{
   font-family: var(--second-family);
-font-weight: 400;
-font-size: 52px;
-line-height: 123%;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: var(--black);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 123%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--black);
 }
 
 .work-together-span{
   color: var(--accet-green);
 }
 
-.work-together-par{ padding-top: 40px;
+.work-together-par{ 
+  padding-top: 40px;
   font-family: var(--font-family);
-font-weight: 400;
-font-size: 18px;
-line-height: 156%;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: var(--black);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--black);
 }
 
 
@@ -40,7 +42,20 @@ color: var(--black);
   align-items: flex-start;
   justify-content: flex-start;
   position: relative;
+}
 
+.work-together-li a {
+  display: flex;
+  align-items: center; 
+  gap: 16px;}
+
+.work-together-li{
+  color: var(--black);
+  white-space: nowrap;
+}
+
+.work-together-li:hover{
+  color: var(--accet-green);
 }
 
 .work-together-svg{
@@ -50,6 +65,7 @@ color: var(--black);
 
 .work-together-modal-form{
   padding-top: 40px;
+  position: relative;
 }
 
 .work-together-form{
@@ -62,6 +78,7 @@ color: var(--black);
 }
 
 .work-together-input{
+  color: var(--black);
   border: none;
   border-radius: 8px;
   padding: 16px;
@@ -98,7 +115,11 @@ color: var(--black);
 
 
 @media screen and (min-width: 768px) {
-  
+  .work-together-container{
+    margin-top: 62px;
+    margin-bottom: 62px;
+  }
+
   .work-together-title{
     font-size: 108px;
     line-height: 115%;
@@ -126,11 +147,78 @@ color: var(--black);
 
 
 @media screen and (min-width: 1280px) {
+  .work-together-container{
+    margin-top: 82.5px;
+    margin-bottom: 81.5px;
+  }
 
-  .work-together-input{
-    width: 592px;
+  .work-together-title{
+    width: 532px;
     }
 
+  .work-together-address-div{
+    width: 488px;
+    }
+
+  .work-together-address{
+    padding-top: 120px;
+  }
+
+  .work-together-ul {
+    display: flex;
+    flex-direction: column; 
+    gap: 16px;  
+  }
+
+  .work-together-modal-form{
+    width: 592px;
+    padding: 0px;
+  }
   
+  .work-together-form{
+    width: 592px;
+    position: absolute;
+    left: 624px;
+    bottom: 1px;
+  }
+}
+
+/* #region Pictures */
+@media screen and (min-width: 768px) {
+  .work-together-bg::after{
+    content: '';
+    position: absolute;
+    width: 336px;
+    height: 260px;
+    background-image: url('../img/work-together/work-together-bg-tabl.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 400px;
+    top: -125px;
+  }
   
 }
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .work-together-bg::after{
+    background-image: url('../img/work-together/work-together-bg-tabl@2x.png');
+  }
+}
+
+@media screen and (min-width: 1280px){
+  .work-together-bg::after{
+    width: 526px;
+    height: 408px;
+    background-image: url('../img/work-together/work-together-bg-desc.png');
+    left: 722px;
+    top: -125px;
+  }
+
+}
+
+@media screen and (min-width: 1280px) and (min-resolution: 192dpi){
+  .work-together-bg::after{
+    background-image: url('../img/work-together/work-together-bg-desc@2x.png');
+  }
+}
+/* #endregion */

@@ -1,8 +1,6 @@
 <section>
     <div class="container work-together-container">
-        <div class="work-together-title-div">
-          <h1 class="work-together-title">LET'S <span class="work-together-span">WORK TOGETHER</span></h1>
-        </div>
+          <h1 class="work-together-title work-together-bg">LET'S <span class="work-together-span">WORK TOGETHER</span></h1>
         <div class="work-together-address-div">
           <p class="work-together-par">Contact me to transform your ideas into exceptional solutions.</p>
             <address class="work-together-address">
@@ -10,22 +8,22 @@
                     
                     <li class="work-together-li"> 
                     <a href="tel:+380904567890">
-                      <svg class="work-together-svg" width="22" height="22">
-                        <use href="./work-together-images/work-together-icons.svg#icon-work-together-telefon"></use>
+                      <svg class="work-together-svg" width="24" height="24">
+                        <use href="../img/work-together/work-together-icons.svg#icon-work-together-tel"></use>
                       </svg>+38 090 456 78 90</a>
                     </li>
                     
                     <li class="work-together-li"> 
                     <a href="mailto:lloydjefferson@gmail.com">
-                      <svg class="work-together-svg" width="22" height="16">
-                        <use href="./work-together-images/work-together-icons.svg#icon-work-together-mail"></use>
+                      <svg class="work-together-svg" width="24" height="24">
+                        <use href="../img/work-together/work-together-icons.svg#icon-work-together-mail"></use>
                       </svg>lloydjefferson@gmail.com</a>
                     </li>
                     
                     <li class="work-together-li">
                     <a href="https://www.google.com/maps/place/New+York,+NY,+USA" target="_blank">
-                      <svg class="work-together-svg" width="16" height="21">
-                        <use href="./work-together-images/work-together-icons.svg#icon-work-together-map"></use>
+                      <svg class="work-together-svg" width="24" height="24">
+                        <use href="../img/work-together/work-together-icons.svg#icon-work-together-map"></use>
                       </svg>USA, New York</a>
                     </li>
                 </ul>
@@ -39,10 +37,11 @@
                   type="email"
                   name="user-email"
                   placeholder="Your email*"
-                  pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"/> 
+                  pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+                  required/> 
               </label>
               <label>
-                <input class="work-together-input work-together-message" type="text" name="message" placeholder="Message">
+                <textarea class="work-together-input work-together-message" type="text" name="message" placeholder="Message"></textarea> 
               </label>
               <button class="work-together-button" type="submit">
                 SEND MESSAGE
