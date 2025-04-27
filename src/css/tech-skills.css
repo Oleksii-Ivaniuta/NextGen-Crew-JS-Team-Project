@@ -1,3 +1,149 @@
-.tech-skills {
-  color: blueviolet;
+:root {
+  --black: #292929;
+  --accet-green: #00b068;
+  --white: #f0f0f0;
+  --light-grey: #e4e5e6;
+  --light-accet: #bcdfd1;
+  --hover-green: #009156;
+  --error: #e74a3b;
+  --hover-grey: #bbbbbb;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.section-tech-skills {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/*мобильная версия*/
+.marquee {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+  position: relative;
+  background-color: var(--light-accet);
+}
+
+.marquee-top {
+  background-color: var(--light-accet);
+}
+
+.marquee-bottom {
+  background-color: var(--light-grey);
+  transform: rotate(2deg);
+}
+
+.marquee__inner {
+  display: flex;
+  min-width: 100%;
+}
+
+.marquee__line {
+  display: flex;
+  flex-shrink: 0;
+  white-space: nowrap;
+  min-width: max-content;
+  animation: marqueeLine 20s linear infinite;
+}
+
+.word {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.word.black {
+  color: var(--black);
+}
+
+.word.green {
+  color: var(--accet-green);
+}
+
+.dot {
+  font-size: 32px;
+  padding: 0 8px;
+}
+
+.dot.green {
+  color: var(--accet-green);
+}
+
+.dot.black {
+  color: var(--black);
+}
+
+/* Анимация бегущей строки */
+@keyframes marqueeLine {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------------- Планшетка ---------------- */
+@media (min-width: 768px) {
+  .marquee {
+    padding: 40px 0;
+  }
+
+  .word {
+    font-size: 36px;
+    line-height: 1.33333;
+    letter-spacing: 0.01em;
+  }
+
+  .dot {
+    font-size: 36px;
+  }
+  .section-tech-skills {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+}
+
+/* ---------------- ПК ---------------- */
+@media (min-width: 1280px) {
+  .marquee {
+    padding: 40px 0;
+  }
+
+  .word {
+    font-size: 36px;
+    line-height: 1.33333;
+    letter-spacing: 0.01em;
+  }
+
+  .dot {
+    font-size: 36px;
+  }
+  .section-tech-skills {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
 }

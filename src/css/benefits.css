@@ -1,7 +1,6 @@
 /* Mobile first (360px) */
 .benefits {
   min-width: 320px;
-  max-width: 360px;
   height: 1120px;
   margin: 40px 0;
 }

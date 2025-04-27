@@ -71,6 +71,7 @@
   --light-accet: var(--dark-accet-dt);
   --hover-green: var(--hover-dt);
   --hover-grey: var(--hover-charcoal-dt);
+  --black-dt: var(--white);
 }
 
 body {
@@ -81,6 +82,10 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--color-bg);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 main {
