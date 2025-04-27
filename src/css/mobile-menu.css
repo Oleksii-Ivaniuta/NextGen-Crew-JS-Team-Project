@@ -14,6 +14,9 @@ body {
 *::after {
   box-sizing: border-box;
 }
+.containermobailmenu {
+  padding-left: 20px;
+}
 
 .mobile-menu {
   display: none;
