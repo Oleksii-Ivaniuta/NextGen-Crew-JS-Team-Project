@@ -15,15 +15,44 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@300;400;500;600&display=swap"
     rel="stylesheet">
   <script type="module" crossorigin src="/NextGen-Crew-JS-Team-Project/index.js"></script>
-  <link rel="stylesheet" crossorigin href="/NextGen-Crew-JS-Team-Project/assets/index-VxYBU2Zg.css">
+  <link rel="stylesheet" crossorigin href="/NextGen-Crew-JS-Team-Project/assets/index-DD9DhSRp.css">
 </head>
 
 <body>
-  <header>
-    <div class="container">
-        <p class="header">HEADER</p>
-    </div>
+  <header class="header">
+  <div class="container">
+    <a href="./index.html" class="header--logo"
+      >Lloyd<span class="header--logo-sub">Jefferson.</span></a
+    >
+    <nav>
+      <div class="theme-btn-container header-theme">
+        <button class="theme-auto-set-btn" type="button">A</button>
+        <button class="theme-toggle-btn" type="button">M</button>
+      </div>
+      <ul class="header--nav-list">
+        <li class="header--nav--list-item">
+          <a href="#about-me" class="header--nav--list-link">About me</a>
+        </li>
+        <li class="header--nav--list-item">
+          <a href="#my-projects" class="header--nav--list-link">Projects</a>
+        </li>
+        <li class="header--nav--list-item">
+          <a href="#work-together" class="header--nav--list-link">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    <button
+      type="button"
+      class="header--open-menu"
+      aria-label="open menu button"
+    >
+      <svg class="header--burger-icon" data-menu-open width="32" height="32">
+        <use href="/NextGen-Crew-JS-Team-Project/assets/sprite-BgjgWPyO.svg#icon-Vector"></use>
+      </svg>
+    </button>
+  </div>
 </header>
+
 
   <main>
     <!-- Loads the specified .html file -->
@@ -81,11 +110,77 @@
   </div>
 </div>
 
-    <section>
-    <div class="container">
-        <p class="hero">HERO</p>
+    <section class="hero section">
+  <div class="container">
+    <picture>
+      <source srcset="/NextGen-Crew-JS-Team-Project/assets/decor_bg-desk-B4qOblZu.png" media="(min-width: 1280px)" />
+      <source
+        srcset="/NextGen-Crew-JS-Team-Project/assets/decor_bg-tablet-CmwZ9M0i.png"
+        media="(min-width: 768px)" />
+      <img src="/NextGen-Crew-JS-Team-Project/assets/decog_bg-kjNDP7KY.png" alt="back drop" class="hero--bg"
+    /></picture>
+    <div class="hero--wrapper">
+      <h1 class="hero--title">
+        Hello, I am
+        <span class="hero--title-sub">Fullstack developer</span>
+      </h1>
+      <img
+        src="/NextGen-Crew-JS-Team-Project/assets/hero_desk-CiyUZ3LN.webp"
+        srcset="/NextGen-Crew-JS-Team-Project/assets/hero_desk-CiyUZ3LN.webp 1x, /NextGen-Crew-JS-Team-Project/assets/hero_desk@2x-BtZHqMxW.webp 2x"
+        alt="Lloyd Jefferson"
+        width="592"
+        height="444"
+      />
     </div>
+    <div class="hero--lower-box">
+      <div class="hero--btn">
+        <svg class="hero--icon" width="30" height="16">
+          <use href="/NextGen-Crew-JS-Team-Project/assets/sprite-BgjgWPyO.svg#icon-green"></use>
+        </svg>
+        <a href="#work-together" class="hero--link">Order the project</a>
+      </div>
+      <p class="hero--text">
+        I work with people all over the world to create
+        <span class="hero--title-sub">impressive</span> and
+        <span class="hero--title-sub">functional websites</span>
+        that reflect each client’s unique personality.
+      </p>
+    </div>
+  </div>
+  <div class="hero--links-bar">
+    <ul class="hero--links-list">
+      <li>
+        <a
+          href="https://www.instagram.com/goitclub/ "
+          class="hero--socials-links"
+          >Instagram</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.facebook.com/goITclub/ "
+          class="hero--socials-links"
+          >Facebook</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/school/goit-start-your-career-in-it "
+          class="hero--socials-links"
+          >Linkedin</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/about-me"
+          class="hero--socials-links"
+          >GitHub</a
+        >
+      </li>
+    </ul>
+  </div>
 </section>
+
     <section id="about-me" class="about-me-section">
     <div class="container">
         <h2 class="about-me-header">ABOUT <span class="about-me-span-me">ME</span></h2>
