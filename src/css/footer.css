@@ -1,5 +1,6 @@
 .footer {
-  margin-top: 82px;
+  margin-top: 62px;
+  border-top: 1px solid #e4e5e6;
   padding: 40px 20px 24px 20px;
   display: flex;
   flex-direction: column;
@@ -62,7 +63,7 @@
 }
 .footer-bottom {
   margin: 0 auto 0 auto;
-  width: 197px;
+  width: 190px;
 }
 
 .footer-copyright {
