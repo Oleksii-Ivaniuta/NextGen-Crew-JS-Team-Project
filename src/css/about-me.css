@@ -1,3 +1,233 @@
-.about-me {
-  color: blue;
+.about-me-section {
+  margin: 40px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-section {
+    margin: 62px 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-me-section {
+    margin: 82px 0;
+  }
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: var(--black);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  font-family: var(--font-family);
+  gap: 40px;
+}
+@media screen and (min-width: 768px) {
+  .about-me-container {
+    column-gap: 32px;
+    row-gap: 60px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-me-container {
+    column-gap: 136px;
+    row-gap: 80px;
+    justify-content: center;
+  }
+}
+
+.about-me-header {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 123%;
+  letter-spacing: 0.03em;
+  color: var(--black);
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-header {
+    font-size: 108px;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+  }
+}
+
+.about-me-span-me {
+  color: var(--accet-green);
+}
+
+.about-me-picture-container {
+  border-radius: 16px;
+  overflow: hidden;
+  width: 320px;
+}
+
+.about-me-descr-cont {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-me-h3 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-picture-container {
+    width: 336px;
+    height: 392px;
+    margin-top: 368px;
+  }
+  .about-me-descr-cont {
+    width: 336px;
+  }
+  .about-me-h3 {
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: 0.01em;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-me-picture-container {
+    width: 384px;
+    height: 448px;
+    margin-top: 272px;
+    margin-left: 100px;
+  }
+  .about-me-descr-cont {
+    width: 384px;
+  }
+  .about-me-bio {
+    width: 488px;
+    height: 408px;
+  }
+}
+
+.about-me-article {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  font-family: var(--font-family);
+}
+
+.about-me-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media screen and (min-width: 768px) {
+  .about-me-ul {
+    gap: 16px;
+  }
+}
+
+.about-me-li {
+  position: relative;
+  padding-left: 32px;
+}
+
+.about-me-li::before {
+  content: '';
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  transform: rotate(-180deg);
+}
+.about-me-li::before {
+  content: '';
+  position: absolute;
+  top: 0.6em;
+  left: 10px;
+  width: 4px;
+  height: 4px;
+  background: var(--accet-green);
+  border-radius: 1px;
+  transform: rotate(-180deg);
+}
+
+.about-me-bg-cont {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-bg-cont::after {
+    content: '';
+    position: absolute;
+    width: 336px;
+    height: 252px;
+    background-image: url('../img/about-me/about-me-bg-tab.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -264px;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .about-me-bg-cont::after {
+    background-image: url('../img/about-me/about-me-bg-tab@2x.webp');
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-me-bg-cont::after {
+    content: '';
+    position: absolute;
+    width: 384px;
+    height: 288px;
+    background-image: url('../img/about-me/about-me-bg-desk.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -328px;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-resolution: 192dpi) {
+  .about-me-bg-cont::after {
+    background-image: url('../img/about-me/about-me-bg-desk@2x.webp');
+  }
+}
+
+.about-me-bio-p1-span {
+  margin-right: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-bio-p1-span {
+    margin-right: 120px;
+  }
+  .about-me-bio-p2-span {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-me-bio-p1 {
+    width: 480px;
+  }
+
+  .about-me-bio-p2 {
+    width: 486px;
+  }
+  .about-me-bio-p1-span {
+    margin-right: 0px;
+  }
+  .about-me-bio-p2-span {
+    margin-right: 20px;
+  }
 }
