@@ -6,12 +6,12 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--black);
-    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.8); 
 }
 
 .work-together-modal-content {
-    background-color: var(--white);
+    background-color: var(--color-bg); 
+    opacity: 1; 
     border: 1px solid var(--light-grey);
     margin: 15% auto;
     padding: 48px 32px;
@@ -19,7 +19,7 @@
     width: 320px;
     height: 328px;
     position: relative;
-    
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .work-together-close-modal {
@@ -28,10 +28,6 @@
     top: 5px;
     font-size: 24px;
     cursor: pointer;
-}
-
-.success-modal .work-together-modal-content {
-    border-top: 4px solid var(--accet-green);
 }
 
 .work-together-modal-par {
@@ -56,45 +52,6 @@
     padding-top: 16px;
 }
 
-.error-modal .work-together-modal-content {
-    border-top: 4px solid var(--error);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.error-modal .work-together-close-modal {
-    color: var(--error);
-    font-size: 28px;
-    font-weight: bold;
-    top: 15px;
-    right: 15px;
-}
-
-#errorMessage {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.5;
-    color: var(--black);
-    margin-top: 20px;
-    padding: 0 20px;
-    word-break: break-word;
-    max-height: 200px;
-    overflow-y: auto;
-}
-
-#errorMessage a {
-    color: var(--accet-green);
-    text-decoration: underline;
-}
-
-#errorMessage a:hover {
-    text-decoration: none;
-}
-
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -109,18 +66,5 @@
         padding: 64px;
         width: 492px;
         height: 280px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .error-modal .work-together-modal-content {
-        height: auto;
-        min-height: 250px;
-        padding: 40px 20px;
-    }
-    
-    #errorMessage {
-        font-size: 16px;
-        padding: 0 10px;
     }
 }

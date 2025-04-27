@@ -127,6 +127,7 @@
   }
   
   .work-together-par{
+    width: 488px;
       font-size: 20px;
       line-height: 160%;
       padding-top: 60px;
@@ -148,8 +149,8 @@
 
 @media screen and (min-width: 1280px) {
   .work-together-container{
-    margin-top: 82.5px;
-    margin-bottom: 81.5px;
+    margin-top: 82px;
+    margin-bottom: 82px;
   }
 
   .work-together-title{

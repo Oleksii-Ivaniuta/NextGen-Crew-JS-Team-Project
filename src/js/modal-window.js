@@ -1,27 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
     const successModal = document.getElementById('successModal');
-    const errorModal = document.getElementById('errorModal');
-    const errorMessage = document.getElementById('errorMessage');
     const closeButtons = document.querySelectorAll('.work-together-close-modal');
     const body = document.body;
 
-    function closeAllModals() {
+    function closeModal() {
         successModal.style.display = 'none';
-        errorModal.style.display = 'none';
         body.style.overflow = 'auto'; 
         document.removeEventListener('keydown', handleKeyDown); 
     }
 
-    function openModal(modal) {
-        modal.style.display = 'block';
+    function openModal() {
+        successModal.style.display = 'block';
         body.style.overflow = 'hidden'; 
         document.addEventListener('keydown', handleKeyDown); 
     }
 
     function handleKeyDown(e) {
         if (e.key === 'Escape') {
-            closeAllModals();
+            closeModal();
         }
     }
 
@@ -48,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const result = await response.json();
                 console.log('Успешный ответ:', result);
                 form.reset();
-                openModal(successModal);
+                openModal();
             } else {
                 const errorData = await response.json();
                 throw new Error(errorData.message || 'Error sending message. Please try again.');
@@ -56,20 +53,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
         } catch (error) {
             console.error('Ошибка запроса:', error);
-            errorMessage.textContent = error.message.includes('Failed to fetch') 
-                ? 'Error sending message. Please try again.' 
-                : error.message;
-            openModal(errorModal);
+            // Показываем ошибку через iziToast
+            iziToast.error({
+                title: 'Error',
+                message: error.message.includes('Failed to fetch') 
+                    ? 'Error sending message. Please try again.' 
+                    : error.message,
+                position: 'topRight',
+                timeout: 5000,
+                progressBar: true,
+                closeOnClick: true
+            });
         }
     });
 
     closeButtons.forEach(button => {
-        button.addEventListener('click', closeAllModals);
+        button.addEventListener('click', closeModal);
     });
 
     window.addEventListener('click', function(event) {
-        if (event.target === successModal || event.target === errorModal) {
-            closeAllModals();
+        if (event.target === successModal) {
+            closeModal();
         }
     });
 });
