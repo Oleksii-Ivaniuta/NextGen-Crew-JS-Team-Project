@@ -1,13 +1,36 @@
-<div class="mobile-menu">
+<div class="mobile-menu" data-menu>
   <div class="menu-header">
     <a href="#" class="logo">
       LLOYD<span class="logo-accent">JEFFERSON.</span>
     </a>
-    <button class="menu-close">
-      <svg width="32" height="32">
-        <use href="../public/mobilemenu.svg#iconx1"></use>
+    <button class="menu-close" data-menu-close>
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M24 8L8 24"
+          stroke="#292929"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M8 8L24 24"
+          stroke="#292929"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
       </svg>
     </button>
+  </div>
+  <div class="theme-btn-container">
+    <button class="theme-auto-set-btn" type="button">A</button>
+    <button class="theme-toggle-btn" type="button">M</button>
   </div>
 
   <div class="menu-content">
@@ -17,9 +40,9 @@
 
     <nav>
       <ul>
-        <li><a href="#">About me</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contacts</a></li>
+        <li><a href="#about-me">About me</a></li>
+        <li><a href="#my-projects">Projects</a></li>
+        <li><a href="#work-together">Contacts</a></li>
       </ul>
     </nav>
 
