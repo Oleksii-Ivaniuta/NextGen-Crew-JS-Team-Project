@@ -4,9 +4,16 @@
   --white: #f0f0f0;
 }
 
+.dark {
+  --black: #f0f0f0;
+  --white: #292929;
+}
+
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family, 'Poppins'), sans-serif;
+  background-color: var(--white);
+  transition: background-color 0.3s;
 }
 
 *,
@@ -14,10 +21,8 @@ body {
 *::after {
   box-sizing: border-box;
 }
-.containermobailmenu {
-  padding-left: 20px;
-}
 
+/* Mobile Menu */
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -25,38 +30,35 @@ body {
   height: 100%;
   background-color: var(--white);
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   z-index: 1000;
   overflow-y: auto;
-  padding: 0;
+  transition: background-color 0.3s;
 }
 
-/* Появление меню */
 .mobile-menu.is-open {
   display: flex;
 }
 
-/* Шапка */
+.dark .mobile-menu {
+  background-color: var(--white); /* у темній темі var(--white) = чорний */
+}
+
+/* Header */
 .menu-header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
   justify-content: space-between;
-
-  padding: 20px 20px;
+  padding: 20px;
 }
 
 .logo {
-  font-family: 'Impact', sans-serif;
-  font-weight: 400;
+  font-family: var(--second-family, 'Impact'), sans-serif;
   font-size: 24px;
-  line-height: 1;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--black);
-  text-decoration: none;
 }
 
 .logo-accent {
@@ -68,8 +70,45 @@ body {
   border: none;
   cursor: pointer;
   padding: 0;
+  color: var(--black);
+  transition: color 0.3s;
 }
 
+.dark .menu-close {
+  color: var(--black); /* var(--black) в темній темі = білий */
+}
+
+.containermobailmenu {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.theme-auto-set-btn,
+.theme-toggle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--black);
+  background: transparent;
+  color: var(--black);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.theme-auto-set-btn:hover,
+.theme-toggle-btn:hover {
+  background-color: var(--accet-green);
+  color: var(--white);
+}
+
+.dark .theme-auto-set-btn,
+.dark .theme-toggle-btn {
+  border-color: var(--black);
+  color: var(--black);
+}
+
+/* Content */
 .menu-content {
   display: flex;
   flex-direction: column;
@@ -77,24 +116,17 @@ body {
   justify-content: space-between;
   flex-grow: 1;
   padding: 20px;
-  position: relative;
 }
 
-.decor-top {
-  width: 100%;
-  height: auto;
+.decor-top use,
+.decor-bottom use {
+  fill: var(--black);
+  transition: fill 0.3s;
 }
 
-.decor-bottom {
-  width: 100%;
-  height: auto;
-}
-
-.menu-content nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
+.dark .decor-top use,
+.dark .decor-bottom use {
+  fill: var(--black); /* var(--black) в темній темі = білий */
 }
 
 .menu-content nav ul {
@@ -103,22 +135,21 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 24px;
 }
 
 .menu-content nav ul li a {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
   color: var(--black);
   text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu-content nav ul li a:hover {
+  color: var(--accet-green);
 }
 
 @media (min-width: 769px) {
   .mobile-menu {
-    display: none;
+    display: none !important;
   }
 }
