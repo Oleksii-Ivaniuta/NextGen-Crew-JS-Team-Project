@@ -31,13 +31,10 @@
 }
 
 .success-modal .work-together-modal-content {
-    border-top: 4px solid var(--accet-green);;
+    border-top: 4px solid var(--accet-green);
 }
 
-.error-modal .work-together-modal-content {
-    border-top: 4px solid var(--error);}
-
-.work-together-modal-par{
+.work-together-modal-par {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 20px;
@@ -48,7 +45,7 @@
     color: var(--accet-green);
 }
 
-.work-together-modal-par-par{
+.work-together-modal-par-par {
     font-family: var(--font-family);
     font-weight: 300;
     font-size: 16px;
@@ -59,11 +56,71 @@
     padding-top: 16px;
 }
 
-@media screen and (min-width: 768px){
-.work-together-modal-content{
-    padding: 64px;
-    width: 492px;
-    height: 280px;
-}
+.error-modal .work-together-modal-content {
+    border-top: 4px solid var(--error);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
+.error-modal .work-together-close-modal {
+    color: var(--error);
+    font-size: 28px;
+    font-weight: bold;
+    top: 15px;
+    right: 15px;
+}
+
+#errorMessage {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--black);
+    margin-top: 20px;
+    padding: 0 20px;
+    word-break: break-word;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#errorMessage a {
+    color: var(--accet-green);
+    text-decoration: underline;
+}
+
+#errorMessage a:hover {
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.work-together-modal[style*="display: block"] .work-together-modal-content {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@media screen and (min-width: 768px) {
+    .work-together-modal-content {
+        padding: 64px;
+        width: 492px;
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .error-modal .work-together-modal-content {
+        height: auto;
+        min-height: 250px;
+        padding: 40px 20px;
+    }
+    
+    #errorMessage {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+}

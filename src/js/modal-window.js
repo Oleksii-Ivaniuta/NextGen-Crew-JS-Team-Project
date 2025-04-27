@@ -10,11 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
         successModal.style.display = 'none';
         errorModal.style.display = 'none';
         body.style.overflow = 'auto'; 
+        document.removeEventListener('keydown', handleKeyDown); 
     }
 
     function openModal(modal) {
         modal.style.display = 'block';
         body.style.overflow = 'hidden'; 
+        document.addEventListener('keydown', handleKeyDown); 
     }
 
     function handleKeyDown(e) {
@@ -22,8 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
             closeAllModals();
         }
     }
-
-    document.addEventListener('keydown', handleKeyDown);
 
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         try {
-            const response = await fetch('https://portfolio.js.h.gotit.study/api/requests', {
+            const response = await fetch('https://portfolio-js.b.goit.study/api/requests', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,12 +51,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 openModal(successModal);
             } else {
                 const errorData = await response.json();
-                throw new Error(errorData.message || `Ошибка сервера: ${response.status}`);
+                throw new Error(errorData.message || 'Error sending message. Please try again.');
             }
 
         } catch (error) {
             console.error('Ошибка запроса:', error);
-            errorMessage.textContent = error.message || 'Ошибка сети. Пожалуйста, проверьте соединение.';
+            errorMessage.textContent = error.message.includes('Failed to fetch') 
+                ? 'Error sending message. Please try again.' 
+                : error.message;
             openModal(errorModal);
         }
     });

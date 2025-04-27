@@ -202,3 +202,32 @@
     background-image: url('../img/about-me/about-me-bg-desk@2x.webp');
   }
 }
+
+.about-me-bio-p1-span {
+  margin-right: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-bio-p1-span {
+    margin-right: 120px;
+  }
+  .about-me-bio-p2-span {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-me-bio-p1 {
+    width: 480px;
+  }
+
+  .about-me-bio-p2 {
+    width: 486px;
+  }
+  .about-me-bio-p1-span {
+    margin-right: 0px;
+  }
+  .about-me-bio-p2-span {
+    margin-right: 20px;
+  }
+}
