@@ -190,7 +190,7 @@
     position: absolute;
     width: 336px;
     height: 260px;
-    background-image: url('../img/work-together/work-together-bg-tabl.png');
+    background-image: url('../img/work-together/work-together-bg-tabl.webp');
     background-repeat: no-repeat;
     background-size: contain;
     left: 400px;
@@ -201,7 +201,7 @@
 
 @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
   .work-together-bg::after{
-    background-image: url('../img/work-together/work-together-bg-tabl@2x.png');
+    background-image: url('../img/work-together/work-together-bg-tabl@2x.webp');
   }
 }
 
@@ -209,7 +209,7 @@
   .work-together-bg::after{
     width: 526px;
     height: 408px;
-    background-image: url('../img/work-together/work-together-bg-desc.png');
+    background-image: url('../img/work-together/work-together-bg-desc.webp');
     left: 722px;
     top: -125px;
   }
@@ -218,7 +218,7 @@
 
 @media screen and (min-width: 1280px) and (min-resolution: 192dpi){
   .work-together-bg::after{
-    background-image: url('../img/work-together/work-together-bg-desc@2x.png');
+    background-image: url('../img/work-together/work-together-bg-desc@2x.webp');
   }
 }
 /* #endregion */
