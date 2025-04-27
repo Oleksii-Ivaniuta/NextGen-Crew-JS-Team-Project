@@ -2,7 +2,6 @@
 .benefits {
   min-width: 320px;
   height: 1120px;
-  margin: 40px 0;
 }
 .ben-img {
   display: none;
@@ -74,9 +73,6 @@
 
 /* Tablet styles (768px) */
 @media screen and (min-width: 768px) {
-  .benefits {
-    margin: 62px;
-  }
   .ben-title {
     width: 704px;
     height: 372px;
@@ -122,10 +118,13 @@
 /* Desktop styles (1280px)*/
 @media screen and (min-width: 1280px) {
   .ben-img {
-    display: block;
+    display: flex;
     position: absolute;
-    top: 70px;
-    right: 50px;
+    left: 790px;
+    top: 1px;
+  }
+  .ben-title {
+    position: relative;
   }
   .ben-title-text {
     display: block;
