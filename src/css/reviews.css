@@ -41,7 +41,6 @@
   border-radius: 8px;
   background-color: var(--light-grey);
   color:var(--black);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   overflow: hidden; 
 }
 
@@ -83,6 +82,7 @@ overflow: hidden;
 
 .swiper-button-prev,
 .swiper-button-next {
+  background-color: transparent;
   position: static;
   width: 40px;
   height: 40px;
@@ -94,36 +94,22 @@ overflow: hidden;
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
-  transition: background-color 0.3s, color 0.3s; /* Плавное изменение фона */
+  transition: background-color 0.3s, color 0.3s; 
 }
 
-
-
-.swiper-button-prev::after {
-  content: '←'; /* Левая стрелка */
-  font-size: 20px;
-  color: var(--black);
-}
-
-
-.swiper-button-next::after {
-  content: '→'; /* Правая стрелка */
-  font-size: 20px;
-  color: var(--black);
-}
-
-.swiper-button-prev.swiper-button-disabled::after ,
-.swiper-button-next.swiper-button-disabled::after  {
-  
-  color: var(--light-grey);
-}
-
-.swiper-button-next::after {
-  content: '→'; /* Правая стрелка */
-  font-size: 20px;
-  color: var(--black);
-}
 
 .swiper-button-disabled{
   border: var(--light-grey) 1px solid;
+  color: var(--light-grey);
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.icon-wrapper svg{
+  transform: translate(-4px, -3px);
+  
 }

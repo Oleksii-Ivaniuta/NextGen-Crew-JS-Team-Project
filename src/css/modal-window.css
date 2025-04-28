@@ -1,0 +1,70 @@
+.work-together-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.work-together-modal-content {
+    background-color: var(--color-bg); 
+    opacity: 1; 
+    border: 1px solid var(--light-grey);
+    margin: 15% auto;
+    padding: 48px 32px;
+    border-radius: 16px;
+    width: 320px;
+    height: 328px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.work-together-close-modal {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.work-together-modal-par {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--accet-green);
+}
+
+.work-together-modal-par-par {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--black);
+    padding-top: 16px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.work-together-modal[style*="display: block"] .work-together-modal-content {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@media screen and (min-width: 768px) {
+    .work-together-modal-content {
+        padding: 64px;
+        width: 492px;
+        height: 280px;
+    }
+}
