@@ -1,7 +1,8 @@
 .footer {
   margin-top: 62px;
   border-top: 1px solid #e4e5e6;
-  padding: 40px 20px 24px 20px;
+  padding: 40px 0 24px 0;
+  width: 360px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -76,9 +77,10 @@
 
 @media screen and (min-width: 768px) {
   .footer {
+    width: 704px;
     flex-direction: column;
     align-items: flex-start;
-    padding: 40px 32px;
+    padding: 40px 0;
   }
 
   .footer-socials {
@@ -97,6 +99,10 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .footer {
+    width: 1216px;
+  }
+
   .footer-content {
     width: 100%;
     flex-direction: row;
