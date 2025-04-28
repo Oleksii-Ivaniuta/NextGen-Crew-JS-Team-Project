@@ -136,6 +136,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  align-items: center;
 }
 
 .menu-content nav ul li a {
@@ -152,4 +153,32 @@ body {
   .mobile-menu {
     display: none !important;
   }
+}
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 0;
+
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.dark .mobile-menu {
+  background-color: var(--white); /* у темній темі var(--white) стає чорним */
 }
