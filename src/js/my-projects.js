@@ -1,49 +1,49 @@
 const projects = [
   {
-    img: 'img/my-projects/energyflow_desk@1x.jpg',
-    img2x: 'img/my-projects/energyflow_desk@2x.jpg',
+    img: 'img/my-projects/energyflow_desc@1x.jpg',
+    img2x: 'img/my-projects/energyflow_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
-    subtitle: 'energy flow webservice ',
+    subtitle: 'energy flow webservice',
     link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
   },
   {
-    img: 'img/my-projects/power_desk@1x.jpg',
-    img2x: 'img/my-projects/power_desk@2x.jpg',
+    img: 'img/my-projects/power_desc@1x.jpg',
+    img2x: 'img/my-projects/power_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
-    subtitle: 'power pulse webservice ',
+    subtitle: 'power pulse webservice',
     link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
   },
   {
-    img: 'img/my-projects/fruibox_desk@1x.jpg',
-    img2x: 'img/my-projects/fruibox_desk@2x.jpg',
+    img: 'img/my-projects/fruitbox_desc@1x.jpg',
+    img2x: 'img/my-projects/fruitbox_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'fruitbox online store',
     link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
   },
   {
-    img: 'img/my-projects/jewelry_desk@1x.jpg',
-    img2x: 'img/my-projects/jewelry_desk@2x.jpg',
+    img: 'img/my-projects/jewelry_desc@1x.jpg',
+    img2x: 'img/my-projects/jewelry_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'chego jewelry website',
     link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
   },
   {
-    img: 'img/my-projects/mimino_desk@1x.jpg',
-    img2x: 'img/my-projects/mimino_desk@2x.jpg',
+    img: 'img/my-projects/mimino_desc@1x.jpg',
+    img2x: 'img/my-projects/mimino_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'mimino website',
     link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
   },
   {
-    img: 'img/my-projects/starlight_desk@1x.jpg',
-    img2x: 'img/my-projects/starlight_desk@2x.jpg',
+    img: 'img/my-projects/starlight_desc@1x.jpg',
+    img2x: 'img/my-projects/starlight_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'starlight studio landing page',
     link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
   },
   {
-    img: 'img/my-projects/vyshyvanka_desk@1x.jpg',
-    img2x: 'img/my-projects/vyshyvanka_desk@2x.jpg',
+    img: 'img/my-projects/vyshyvanka_desc@1x.jpg',
+    img2x: 'img/my-projects/vyshyvanka_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'vyshyvanka vibes Landing Page',
     link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
@@ -77,7 +77,8 @@ let index = 0;
 
 loadBtnEl.addEventListener('click', () => {
   const remainingProjects = projects.slice(index, index + 3);
-
+  const currentItems = containerEl.querySelectorAll('.projects-item');
+  const currentCount = currentItems.length;
   setTimeout(() => {
     containerEl.insertAdjacentHTML(
       'beforeend',
@@ -88,5 +89,28 @@ loadBtnEl.addEventListener('click', () => {
     if (index >= projects.length) {
       loadBtnEl.style.display = 'none';
     }
+
+    const updatedItems = containerEl.querySelectorAll('.projects-item');
+    const firstNewItem = updatedItems[currentCount];
+
+    const img = firstNewItem?.querySelector('img');
+    if (img) {
+      if (img.complete) {
+        scrollToElement(firstNewItem);
+      } else {
+        img.onload = () => scrollToElement(firstNewItem);
+      }
+    }
   }, 400);
 });
+
+function scrollToElement(element) {
+  const rect = element.getBoundingClientRect();
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const offsetTop = rect.top + scrollTop;
+
+  window.scrollTo({
+    top: offsetTop,
+    behavior: 'smooth',
+  });
+}
