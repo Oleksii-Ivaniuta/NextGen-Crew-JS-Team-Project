@@ -15,7 +15,7 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@300;400;500;600&display=swap"
     rel="stylesheet">
   <script type="module" crossorigin src="/NextGen-Crew-JS-Team-Project/index.js"></script>
-  <link rel="stylesheet" crossorigin href="/NextGen-Crew-JS-Team-Project/assets/index-DD9DhSRp.css">
+  <link rel="stylesheet" crossorigin href="/NextGen-Crew-JS-Team-Project/assets/index-Bfs6qor9.css">
 </head>
 
 <body>
@@ -61,6 +61,10 @@
     <a href="#" class="logo">
       LLOYD<span class="logo-accent">JEFFERSON.</span>
     </a>
+    <div class="containermobailmenu theme-btn-container">
+      <button class="theme-auto-set-btn" type="button">A</button>
+      <button class="theme-toggle-btn" type="button">M</button>
+    </div>
     <button class="menu-close" data-menu-close>
       <svg
         width="32"
@@ -71,14 +75,14 @@
       >
         <path
           d="M24 8L8 24"
-          stroke="#292929"
+          stroke="currentColor"
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
         <path
           d="M8 8L24 24"
-          stroke="#292929"
+          stroke="currentColor"
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -86,15 +90,12 @@
       </svg>
     </button>
   </div>
-  <div class="containermobailmenu theme-btn-container">
-    <button class="theme-auto-set-btn" type="button">A</button>
-    <button class="theme-toggle-btn" type="button">M</button>
-  </div>
 
   <div class="menu-content">
-    <svg class="decor-top" width="351.67" height="264.43">
-      <use href="../public/mobilemenu.svg#iconGroup68"></use>
-    </svg>
+    <picture class="decor-top">
+      <source srcset="../img/mobile-menu/Group68.webp" type="image/webp" />
+      <img src="../img/mobile-menu/Group68.png" alt="Group68" loading="lazy" />
+    </picture>
 
     <nav>
       <ul>
@@ -104,9 +105,10 @@
       </ul>
     </nav>
 
-    <svg class="decor-bottom" width="169.58" height="131.26">
-      <use href="../public/mobilemenu.svg#iconGroup64"></use>
-    </svg>
+    <picture class="decor-bottom">
+      <source srcset="../img/mobile-menu/Group64.webp" type="image/webp" />
+      <img src="../img/mobile-menu/Group64.png" alt="Group64" loading="lazy" />
+    </picture>
   </div>
 </div>
 
