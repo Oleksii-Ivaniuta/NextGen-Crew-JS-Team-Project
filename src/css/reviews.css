@@ -1,5 +1,7 @@
 .reviews-section {
   padding: 40px 20px;
+  margin-top:82px;
+  margin-bottom:82px;
 }
 .reviews-header{
   font-family: var(--second-family);
@@ -31,8 +33,8 @@
 
 .swiper-slide {
   display: flex;
-  flex-direction: column; /* Размещаем элементы вертикально */
-  justify-content: space-between; /* Разделяем контент внутри слайда */
+  flex-direction: column; 
+  justify-content: space-between; 
   align-items: flex-start;
   padding: 20px;
   box-sizing: border-box;
@@ -64,27 +66,26 @@ overflow: hidden;
 }
 
 
-/* Общая обертка для списка и навигации */
+
 .reviews-wrapper {
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
 
-/* Навигация под списком */
+
 .reviews-navigation {
   margin-top: 20px;
   display: flex;
   justify-content: flex-end;
   gap: 12px;
 }
-/* Сами кнопки */
+
 .swiper-button-prev,
 .swiper-button-next {
   position: static;
   width: 40px;
   height: 40px;
-  background: #333; /* Начальный цвет фона */
   border: var(--black) 1px solid;
   border-radius: 8px;
   color: var(--black);
@@ -96,30 +97,33 @@ overflow: hidden;
   transition: background-color 0.3s, color 0.3s; /* Плавное изменение фона */
 }
 
-/* Когда кнопки неактивны, фон становится зеленым */
-.swiper-button-prev.swiper-button-disabled,
-.swiper-button-next.swiper-button-disabled {
-  background-color: #28a745; /* Зеленый фон для неактивных кнопок */
-  border: var(--black) 1px solid; /* Можно также оставить или изменить границу */
-  color: #fff; /* Белый цвет текста */
-}
 
-/* Логика для левой кнопки (←) */
+
 .swiper-button-prev::after {
   content: '←'; /* Левая стрелка */
   font-size: 20px;
   color: var(--black);
 }
 
-/* Логика для правой кнопки (→) */
+
 .swiper-button-next::after {
   content: '→'; /* Правая стрелка */
   font-size: 20px;
   color: var(--black);
 }
 
-/* Скрытие кнопок при неактивности */
-.swiper-button-prev.swiper-button-disabled,
-.swiper-button-next.swiper-button-disabled {
-  display:none;
+.swiper-button-prev.swiper-button-disabled::after ,
+.swiper-button-next.swiper-button-disabled::after  {
+  
+  color: var(--light-grey);
+}
+
+.swiper-button-next::after {
+  content: '→'; /* Правая стрелка */
+  font-size: 20px;
+  color: var(--black);
+}
+
+.swiper-button-disabled{
+  border: var(--light-grey) 1px solid;
 }

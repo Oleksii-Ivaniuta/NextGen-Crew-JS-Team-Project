@@ -5,7 +5,7 @@ import 'swiper/css';
 document.addEventListener('DOMContentLoaded', async () => {
   const reviewsList = document.getElementById('reviews-list');
 
-  // Функция для загрузки отзывов с сервера
+  
   async function fetchReviews() {
     try {
       const response = await fetch('https://portfolio-js.b.goit.study/api/reviews');
@@ -20,14 +20,13 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
 
       renderReviews(reviews);
-      initSwiper();  // Важно, чтобы эта функция вызывалась здесь, после загрузки отзывов
+      initSwiper();
     } catch (error) {
       alert('Failed to load reviews: ' + error.message);
       reviewsList.innerHTML = '<li class="swiper-slide">Not found</li>';
     }
   }
 
-  // Функция для рендеринга отзывов
   function renderReviews(reviews) {
     reviewsList.innerHTML = '';
   
@@ -45,7 +44,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  // Функция для инициализации Swiper
   function initSwiper() {
     const swiper = new Swiper('.swiper', {
       modules: [Navigation, Keyboard, Mousewheel],
@@ -75,9 +73,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       },
     });
 
-    // Сначала делаем кнопку влево скрытой
+    
     const prevButton = document.querySelector('.swiper-button-prev');
-    prevButton.classList.add('swiper-button-disabled');  // Кнопка слева неактивна изначально
+    prevButton.classList.add('swiper-button-disabled');  
 
     swiper.on('init', updateButtons);
     swiper.on('slideChange', updateButtons);
@@ -86,14 +84,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       const prevButton = document.querySelector('.swiper-button-prev');
       const nextButton = document.querySelector('.swiper-button-next');
 
-      // Кнопка "предыдущий слайд" появляется, только если не на первом слайде
+      
       if (swiper.isBeginning) {
         prevButton.classList.add('swiper-button-disabled');
       } else {
         prevButton.classList.remove('swiper-button-disabled');
       }
 
-      // Кнопка "следующий слайд" скрывается, если на последнем слайде
+      
       if (swiper.isEnd) {
         nextButton.classList.add('swiper-button-disabled');
       } else {
@@ -102,6 +100,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  // Вызов функции для загрузки отзывов
+  
   fetchReviews();
 });
