@@ -4,6 +4,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeButtons = document.querySelectorAll('.work-together-close-modal');
     const body = document.body;
 
+    function saveFormData() {
+        const formData = {
+            email: form.elements['user-email'].value,
+            message: form.elements['message'].value
+        };
+        localStorage.setItem('contactFormData', JSON.stringify(formData));
+    }
+
+    function restoreFormData() {
+        const savedData = localStorage.getItem('contactFormData');
+        if (savedData) {
+            const formData = JSON.parse(savedData);
+            form.elements['user-email'].value = formData.email || '';
+            form.elements['message'].value = formData.message || '';
+        }
+    }
+
+    restoreFormData();
+
+    form.addEventListener('input', saveFormData);
+
     function closeModal() {
         successModal.style.display = 'none';
         body.style.overflow = 'auto'; 
@@ -45,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const result = await response.json();
                 console.log('Успешный ответ:', result);
                 form.reset();
+                localStorage.removeItem('contactFormData');
                 openModal();
             } else {
                 const errorData = await response.json();
@@ -53,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         } catch (error) {
             console.error('Ошибка запроса:', error);
-            // Показываем ошибку через iziToast
             iziToast.error({
                 title: 'Error',
                 message: error.message.includes('Failed to fetch') 

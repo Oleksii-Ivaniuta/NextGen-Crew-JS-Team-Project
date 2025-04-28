@@ -90,6 +90,7 @@
 .work-together-message{
   border-radius: 8px;
   height: 128px;
+  resize: none;
 }
 
 .work-together-button{
