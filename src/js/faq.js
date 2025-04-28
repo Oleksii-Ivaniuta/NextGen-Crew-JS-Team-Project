@@ -8,41 +8,23 @@ buttons.forEach(button => {
     const currentItem = button.closest('.ac-item');
     const isActive = currentItem.classList.contains('active');
 
-    document
-      .querySelectorAll('.ac-item')
-      .forEach(item => item.classList.remove('active'));
+    document.querySelectorAll('.ac-item').forEach(item => {
+      item.classList.remove('active');
+      const svgBtn = item.querySelector('.trigger-icon');
+      if (svgBtn)
+        svgBtn.setAttribute('href', '../img/faq/icons-faq.svg#icon-down');
+    });
 
     if (!isActive) {
       currentItem.classList.add('active');
+      const svgBtn = currentItem.querySelector('.trigger-icon');
+      if (svgBtn)
+        svgBtn.setAttribute('href', '../img/faq/icons-faq.svg#icon-up');
     }
   });
 });
 
 document.querySelector('.ac-item')?.classList.add('active');
-
-// items.forEach(item => {
-//   const button = item.querySelector('.ac-trigger');
-//   const question = item.querySelector('.ac-question');
-//   const answer = item.querySelector('.answer');
-
-//   button.addEventListener('click', () => {
-//     items.forEach(i => {
-//       const otherAnswer = i.querySelector('.answer');
-//       otherAnswer.classList.remove('active');
-//     });
-//     answer.classList.toggle('active');
-//     items.classList.toggle('active');
-//   });
-// });
-
-// items.forEach(item => {
-//   const button = item.querySelector('.ac-trigger');
-//   button.addEventListener('click', () => {
-//     items.forEach(i => {
-//       if (i !== item) {
-//         i.classList.remove('active');
-//       }
-//     });
-//     items.classList.toggle('active');
-//   });
-// });
+const firstItem = document.querySelector('.ac-item');
+const firstSvg = firstItem?.querySelector('.trigger-icon');
+if (firstSvg) firstSvg.setAttribute('href', '../img/faq/icons-faq.svg#icon-up');

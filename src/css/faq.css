@@ -74,6 +74,7 @@
   height: 32px;
 }
 .trigger-icon {
+  fill: none;
   stroke: var(--black);
 }
 
