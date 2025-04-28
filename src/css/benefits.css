@@ -2,6 +2,7 @@
 .benefits {
   min-width: 320px;
   height: 1120px;
+  margin: 40px 0;
 }
 .ben-img {
   display: none;
@@ -30,7 +31,8 @@
   padding: 0;
 }
 .ben-content-list {
-  width: 320px;
+  max-width: 320px;
+  width: 100%;
 }
 .icon-sq {
   display: flex;
@@ -66,11 +68,14 @@
   line-height: 1.5;
   color: var(--black);
   margin-top: 16px;
-  max-width: 320px;
+  width: 320px;
 }
 
 /* Tablet styles (768px) */
 @media screen and (min-width: 768px) {
+  .benefits {
+    margin: 62px 0;
+  }
   .ben-title {
     width: 704px;
     height: 372px;
@@ -124,8 +129,7 @@
   .benefits {
     position: relative;
     max-width: 1280px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    margin: 82px 0;
   }
   .ben-title-text {
     font-weight: 400;
