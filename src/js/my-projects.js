@@ -74,7 +74,7 @@ function createProjectMarkup(elements) {
 }
 
 let index = 0;
-
+// Завантаження карток
 loadBtnEl.addEventListener('click', () => {
   const remainingProjects = projects.slice(index, index + 3);
   const currentItems = containerEl.querySelectorAll('.projects-item');
