@@ -62,7 +62,7 @@
   --hover-charcoal-dt: #3b3f45;
 }
 
-.dark {
+/* .dark {
   --color-bg: #292929;
   --black: var(--white-dt);
   --accet-green: var(--accet-green-dt);
@@ -71,7 +71,8 @@
   --light-accet: var(--dark-accet-dt);
   --hover-green: var(--hover-dt);
   --hover-grey: var(--hover-charcoal-dt);
-}
+  --black-dt: var(--white);
+} */
 
 body {
   display: flex;
