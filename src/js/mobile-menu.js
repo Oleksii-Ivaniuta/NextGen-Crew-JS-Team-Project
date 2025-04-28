@@ -8,9 +8,11 @@
 
   const toggleMenu = () => {
     refs.menu.classList.toggle('is-open');
-    document.body.style.overflow = refs.menu.classList.contains('is-open')
-      ? 'hidden'
-      : '';
+    if (refs.menu.classList.contains('is-open')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
   };
 
   refs.openBtn?.addEventListener('click', toggleMenu);
