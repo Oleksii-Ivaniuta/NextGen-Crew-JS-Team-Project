@@ -34,12 +34,11 @@
 
 .ac-item {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  flex-direction: column;
-  gap: 24px;
-  /* border-bottom: 1px solid #e4e5e6; */
-  border-radius: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 16px;
+  border-bottom: 1px solid var(--light-grey);
   padding: 28px 24px;
   width: 320px;
 }
@@ -52,6 +51,7 @@
   gap: 16px;
   width: 272px;
 }
+
 .question {
   font-family: var(--font-family);
   font-weight: 400;
@@ -60,6 +60,7 @@
   letter-spacing: 0.03em;
   color: var(--black);
 }
+
 .ac-trigger {
   display: flex;
   align-items: center;
@@ -75,8 +76,11 @@
 .trigger-icon {
   stroke: var(--black);
 }
-.answer {
+
+.ac-answer {
   display: none;
+}
+.answer {
   font-family: var(--font-family);
   font-weight: 300;
   font-size: 16px;
@@ -84,21 +88,30 @@
   letter-spacing: 0.03em;
   color: var(--black);
 }
-.answer.active {
-  display: block;
+
+.ac-item.active {
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 16px;
   background-color: var(--light-accet);
 }
 
-/* .ac-item.active .ac-answer {
+.ac-item.active .ac-answer {
   display: block;
+}
+
+.ac-item.active .ac-trigger {
   background-color: var(--light-accet);
-} */
+}
 
 @media only screen and (min-width: 768px) {
-  .faq {
+  .faq-section {
+    margin: 62px 0;
+  }
+
+  .container {
     gap: 10px;
-    padding: 0px 32px;
-    width: 768px;
   }
 
   .faq-title {
@@ -113,6 +126,7 @@
   }
 
   .ac-item {
+    gap: 24px;
     width: 704px;
   }
 
@@ -130,13 +144,41 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .faq {
+  .faq-section {
+    margin: 82px 0;
+  }
+
+  .container {
     gap: 0px;
-    padding: 0px 32px;
-    width: 1280px;
   }
 
   .faq-title {
+    position: relative;
     width: 520px;
+  }
+
+  .faq-title::after {
+    position: absolute;
+    content: '';
+    width: 526px;
+    height: 408px;
+    background-image: url('../img/faq/decor-faq.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    transform: translateY(100%);
+  }
+
+  .accordion {
+    width: 592px;
+    align-self: flex-end;
+  }
+
+  .ac-item {
+    width: 592px;
+  }
+
+  .ac-question {
+    width: 544px;
   }
 }
