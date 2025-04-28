@@ -137,6 +137,7 @@ body {
   flex-direction: column;
   gap: 24px;
   align-items: center;
+  padding-bottom: 103px;
 }
 
 .menu-content nav ul li a {
@@ -157,8 +158,7 @@ body {
 .mobile-menu {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100vh;
+
   background-color: var(--white);
   position: fixed;
   top: 0;
@@ -181,4 +181,68 @@ body {
 
 .dark .mobile-menu {
   background-color: var(--white); /* у темній темі var(--white) стає чорним */
+}
+.decor-top,
+.decor-bottom {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.decor-top img,
+.decor-bottom img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.decor-top img,
+.decor-bottom img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: blur(4px); /* розмиття */
+}
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.decor-top,
+.decor-bottom {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.decor-top picture,
+.decor-bottom picture {
+  display: block;
+}
+
+.decor-top img {
+  width: 320px;
+  height: 265px;
+  filter: blur(4px);
+  object-fit: contain;
+  margin-bottom: 24px; /* Відступ після верхньої картинки */
+}
+
+.decor-bottom img {
+  width: 170px;
+  height: 132px;
+  filter: blur(4px);
+  object-fit: contain;
+  margin-top: 24px; /* Відступ перед нижньою картинкою */
+}
+
+.menu-content nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
