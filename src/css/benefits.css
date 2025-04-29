@@ -14,6 +14,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   max-width: 320px;
+  padding-bottom: 40px;
 }
 .ben-title-text .benefits-word {
   color: var(--accent-green, #4dc274);
