@@ -72,7 +72,6 @@
 @media screen and (min-width: 768px) {
   .benefits {
     margin: 62px 0;
-    overflow: hidden;
   }
   .ben-title {
     width: 704px;
@@ -127,7 +126,6 @@
   }
   .benefits {
     margin: 82px 0;
-    overflow: hidden;
   }
   .ben-title-text {
     font-weight: 400;
