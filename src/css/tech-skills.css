@@ -1,13 +1,3 @@
-:root {
-  --black: #292929;
-  --accet-green: #00b068;
-  --white: #f0f0f0;
-  --light-grey: #e4e5e6;
-  --light-accet: #bcdfd1;
-  --hover-green: #009156;
-  --error: #e74a3b;
-  --hover-grey: #bbbbbb;
-}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -19,15 +9,6 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-body {
-  margin: 0;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 }
 
 .section-tech-skills {
