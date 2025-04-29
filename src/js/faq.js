@@ -27,4 +27,4 @@ buttons.forEach(button => {
 document.querySelector('.ac-item')?.classList.add('active');
 const firstItem = document.querySelector('.ac-item');
 const firstSvg = firstItem?.querySelector('.trigger-icon use');
-if (firstSvg) firstSvg.setAttribute('href', '../img/faq/icons-faq.svg#icon-up');
+if (firstSvg) firstSvg.setAttribute('href', './img/sprite.svg#icon-up');
