@@ -113,6 +113,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 32px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .projects-subtitle-wrapper {
+    gap: 120px;
   }
 }
 
@@ -152,7 +159,6 @@
 @media only screen and (min-width: 768px) {
   .projects-subtitle-wrapper a {
     white-space: nowrap;
-    margin-left: 16px;
   }
 }
 
