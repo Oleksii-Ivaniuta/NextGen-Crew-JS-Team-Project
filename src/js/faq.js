@@ -12,14 +12,14 @@ buttons.forEach(button => {
       item.classList.remove('active');
       const svgBtn = item.querySelector('.trigger-icon use');
       if (svgBtn)
-        svgBtn.setAttribute('href', '../img/faq/icons-faq.svg#icon-down');
+        svgBtn.setAttribute('href', './img/sprite.svg#icon-down');
     });
 
     if (!isActive) {
       currentItem.classList.add('active');
       const svgBtn = currentItem.querySelector('.trigger-icon use');
       if (svgBtn)
-        svgBtn.setAttribute('href', '../img/faq/icons-faq.svg#icon-up');
+        svgBtn.setAttribute('href', './img/sprite.svg#icon-up');
     }
   });
 });

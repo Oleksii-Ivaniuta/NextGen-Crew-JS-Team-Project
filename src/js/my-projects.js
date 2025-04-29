@@ -1,49 +1,49 @@
 const projects = [
   {
-    img: 'img/my-projects/energyflow_desc@1x.jpg',
-    img2x: 'img/my-projects/energyflow_desc@2x.jpg',
+    img: './img/my-projects/energyflow_desc@1x.jpg',
+    img2x: './img/my-projects/energyflow_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'energy flow webservice',
     link: 'https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/main',
   },
   {
-    img: 'img/my-projects/power_desc@1x.jpg',
-    img2x: 'img/my-projects/power_desc@2x.jpg',
+    img: './img/my-projects/power_desc@1x.jpg',
+    img2x: './img/my-projects/power_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'power pulse webservice',
     link: 'https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/main',
   },
   {
-    img: 'img/my-projects/fruitbox_desc@1x.jpg',
-    img2x: 'img/my-projects/fruitbox_desc@2x.jpg',
+    img: './img/my-projects/fruitbox_desc@1x.jpg',
+    img2x: './img/my-projects/fruitbox_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'fruitbox online store',
     link: 'https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/main',
   },
   {
-    img: 'img/my-projects/jewelry_desc@1x.jpg',
-    img2x: 'img/my-projects/jewelry_desc@2x.jpg',
+    img: './img/my-projects/jewelry_desc@1x.jpg',
+    img2x: './img/my-projects/jewelry_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'chego jewelry website',
     link: 'https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/main',
   },
   {
-    img: 'img/my-projects/mimino_desc@1x.jpg',
-    img2x: 'img/my-projects/mimino_desc@2x.jpg',
+    img: './img/my-projects/mimino_desc@1x.jpg',
+    img2x: './img/my-projects/mimino_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'mimino website',
     link: 'https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/main',
   },
   {
-    img: 'img/my-projects/starlight_desc@1x.jpg',
-    img2x: 'img/my-projects/starlight_desc@2x.jpg',
+    img: './img/my-projects/starlight_desc@1x.jpg',
+    img2x: './img/my-projects/starlight_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'starlight studio landing page',
     link: 'https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/main',
   },
   {
-    img: 'img/my-projects/vyshyvanka_desc@1x.jpg',
-    img2x: 'img/my-projects/vyshyvanka_desc@2x.jpg',
+    img: './img/my-projects/vyshyvanka_desc@1x.jpg',
+    img2x: './img/my-projects/vyshyvanka_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'vyshyvanka vibes Landing Page',
     link: 'https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/main',
@@ -64,7 +64,7 @@ function createProjectMarkup(elements) {
           <a href="${link}" target="_blank">
             Visit
             <svg class="project-icon">
-              <use href="img/my-projects/arrow-sprite.svg#arrow-icon"></use>
+              <use href="./img/sprite.svg#arrow-icon"></use>
             </svg>
           </a>
         </div>
