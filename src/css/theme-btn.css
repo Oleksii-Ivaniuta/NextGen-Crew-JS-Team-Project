@@ -34,8 +34,8 @@
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background-color: var(--black-dt);
-  color: var(--black-dt);
+  background-color: var(--black);
+  color: var(--black);
   border: none;
   border: 2px solid var(--accet-green);
 }
