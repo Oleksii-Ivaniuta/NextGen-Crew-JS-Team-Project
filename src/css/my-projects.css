@@ -215,3 +215,7 @@
 .load-btn:focus span {
   color: var(--accet-green);
 }
+
+.hidden {
+  display: none;
+}
