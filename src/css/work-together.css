@@ -1,6 +1,8 @@
-.work-together-container{
+.together-cont{
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 40px;}
+
+.work-together-container{
   position: relative;
 }
 
@@ -116,11 +118,11 @@
 
 
 @media screen and (min-width: 768px) {
-  .work-together-container{
+  
+  .together-cont{
     margin-top: 62px;
-    margin-bottom: 62px;
-  }
-
+    margin-bottom: 62px;}  
+  
   .work-together-title{
     font-size: 108px;
     line-height: 115%;
@@ -149,14 +151,17 @@
 
 
 @media screen and (min-width: 1280px) {
-  .work-together-container{
+  .together-cont{
     margin-top: 82px;
-    margin-bottom: 82px;
-  }
-
+    margin-bottom: 82px;}  
+ 
   .work-together-title{
     width: 532px;
     }
+
+  .work-together-par{
+    padding-top: 80px;
+  }
 
   .work-together-address-div{
     width: 488px;
@@ -213,7 +218,7 @@
     height: 408px;
     background-image: url('../img/work-together/work-together-bg-desc.webp');
     left: 722px;
-    top: -125px;
+    top: -110px;
   }
 
 }
