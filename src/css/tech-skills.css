@@ -12,8 +12,8 @@
 }
 
 .section-tech-skills {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 /*мобильная версия*/
@@ -103,8 +103,8 @@
     font-size: 36px;
   }
   .section-tech-skills {
-    padding-top: 62px;
-    padding-bottom: 62px;
+    margin-top: 62px;
+    margin-bottom: 62px;
   }
 }
 
@@ -124,7 +124,7 @@
     font-size: 36px;
   }
   .section-tech-skills {
-    padding-top: 82px;
-    padding-bottom: 82px;
+    margin-top: 82px;
+    margin-bottom: 82px;
   }
 }

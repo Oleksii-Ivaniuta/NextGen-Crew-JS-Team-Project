@@ -1,9 +1,8 @@
 .reviews-section {
-  padding: 40px 20px;
-  margin-top:82px;
-  margin-bottom:82px;
+  margin-top: 82px;
+  margin-bottom: 82px;
 }
-.reviews-header{
+.reviews-header {
   font-family: var(--second-family);
   font-weight: 400;
   font-size: 52px;
@@ -33,16 +32,16 @@
 
 .swiper-slide {
   display: flex;
-  flex-direction: column; 
-  justify-content: space-between; 
+  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
   box-sizing: border-box;
   border-radius: 8px;
   background-color: var(--light-grey);
-  color:var(--black);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  overflow: hidden; 
+  color: var(--black);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .reviews-article {
@@ -50,11 +49,11 @@
   font-size: 16px;
   margin-bottom: 15px;
   font-weight: 300;
-font-size: 16px;
-line-height: 24px;
-letter-spacing: 0.5px;
-height:96px;
-overflow: hidden;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  height: 96px;
+  overflow: hidden;
 }
 
 .swiper-slide img {
@@ -65,14 +64,11 @@ overflow: hidden;
   font-size: 16px;
 }
 
-
-
 .reviews-wrapper {
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
-
 
 .reviews-navigation {
   margin-top: 20px;
@@ -97,33 +93,29 @@ overflow: hidden;
   transition: background-color 0.3s, color 0.3s; /* Плавное изменение фона */
 }
 
-
-
 .swiper-button-prev::after {
   content: '←'; /* Левая стрелка */
   font-size: 20px;
-  color: var(--black);
+  color: #292929;
 }
-
 
 .swiper-button-next::after {
   content: '→'; /* Правая стрелка */
   font-size: 20px;
-  color: var(--black);
+  color: #292929;
 }
 
-.swiper-button-prev.swiper-button-disabled::after ,
-.swiper-button-next.swiper-button-disabled::after  {
-  
+.swiper-button-prev.swiper-button-disabled::after,
+.swiper-button-next.swiper-button-disabled::after {
   color: var(--light-grey);
 }
 
 .swiper-button-next::after {
   content: '→'; /* Правая стрелка */
   font-size: 20px;
-  color: var(--black);
+  color: #292929;
 }
 
-.swiper-button-disabled{
+.swiper-button-disabled {
   border: var(--light-grey) 1px solid;
 }

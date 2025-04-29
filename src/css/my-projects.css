@@ -1,17 +1,17 @@
 .projects {
   color: var(--black);
-  padding: 40px 0;
+  margin: 40px 0;
 }
 
 @media only screen and (min-width: 768px) {
   .projects {
-    padding: 62px 0;
+    margin: 62px 0;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .projects {
-    padding: 82px 0;
+    margin: 82px 0;
   }
 }
 

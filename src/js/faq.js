@@ -11,15 +11,13 @@ buttons.forEach(button => {
     document.querySelectorAll('.ac-item').forEach(item => {
       item.classList.remove('active');
       const svgBtn = item.querySelector('.trigger-icon use');
-      if (svgBtn)
-        svgBtn.setAttribute('href', './img/sprite.svg#icon-down');
+      if (svgBtn) svgBtn.setAttribute('href', './img/sprite.svg#icon-down');
     });
 
     if (!isActive) {
       currentItem.classList.add('active');
       const svgBtn = currentItem.querySelector('.trigger-icon use');
-      if (svgBtn)
-        svgBtn.setAttribute('href', './img/sprite.svg#icon-up');
+      if (svgBtn) svgBtn.setAttribute('href', './img/sprite.svg#icon-up');
     }
   });
 });
