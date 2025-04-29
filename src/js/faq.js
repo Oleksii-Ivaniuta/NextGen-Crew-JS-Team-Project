@@ -10,14 +10,14 @@ buttons.forEach(button => {
 
     document.querySelectorAll('.ac-item').forEach(item => {
       item.classList.remove('active');
-      const svgBtn = item.querySelector('.trigger-icon');
+      const svgBtn = item.querySelector('.trigger-icon use');
       if (svgBtn)
         svgBtn.setAttribute('href', '../img/faq/icons-faq.svg#icon-down');
     });
 
     if (!isActive) {
       currentItem.classList.add('active');
-      const svgBtn = currentItem.querySelector('.trigger-icon');
+      const svgBtn = currentItem.querySelector('.trigger-icon use');
       if (svgBtn)
         svgBtn.setAttribute('href', '../img/faq/icons-faq.svg#icon-up');
     }
@@ -26,5 +26,5 @@ buttons.forEach(button => {
 
 document.querySelector('.ac-item')?.classList.add('active');
 const firstItem = document.querySelector('.ac-item');
-const firstSvg = firstItem?.querySelector('.trigger-icon');
+const firstSvg = firstItem?.querySelector('.trigger-icon use');
 if (firstSvg) firstSvg.setAttribute('href', '../img/faq/icons-faq.svg#icon-up');

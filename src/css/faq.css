@@ -67,6 +67,7 @@
   justify-content: center;
   flex-direction: row;
   gap: 10px;
+  background-color: var(----white);
   border-color: transparent;
   border-radius: 8px;
   padding: 8px;
@@ -167,12 +168,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     left: 0;
-    transform: translateY(100%);
+    transform: translateY(80%);
   }
 
   .accordion {
     width: 592px;
     align-self: flex-end;
+    margin-top: -120px;
   }
 
   .ac-item {
