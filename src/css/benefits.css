@@ -135,7 +135,7 @@
     text-transform: uppercase;
   }
   .ben-content-all {
-    margin-top: -80px;
+    transform: translateY(-80px);
   }
   .ben-content-list:nth-child(1) {
     grid-column: 3;
