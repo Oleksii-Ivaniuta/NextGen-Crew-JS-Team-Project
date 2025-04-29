@@ -4,49 +4,49 @@ const projects = [
     img2x: 'img/my-projects/energyflow_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'energy flow webservice',
-    link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
+    link: 'https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/main',
   },
   {
     img: 'img/my-projects/power_desc@1x.jpg',
     img2x: 'img/my-projects/power_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'power pulse webservice',
-    link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
+    link: 'https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/main',
   },
   {
     img: 'img/my-projects/fruitbox_desc@1x.jpg',
     img2x: 'img/my-projects/fruitbox_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'fruitbox online store',
-    link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
+    link: 'https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/main',
   },
   {
     img: 'img/my-projects/jewelry_desc@1x.jpg',
     img2x: 'img/my-projects/jewelry_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'chego jewelry website',
-    link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
+    link: 'https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/main',
   },
   {
     img: 'img/my-projects/mimino_desc@1x.jpg',
     img2x: 'img/my-projects/mimino_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'mimino website',
-    link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
+    link: 'https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/main',
   },
   {
     img: 'img/my-projects/starlight_desc@1x.jpg',
     img2x: 'img/my-projects/starlight_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'starlight studio landing page',
-    link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
+    link: 'https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/main',
   },
   {
     img: 'img/my-projects/vyshyvanka_desc@1x.jpg',
     img2x: 'img/my-projects/vyshyvanka_desc@2x.jpg',
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'vyshyvanka vibes Landing Page',
-    link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
+    link: 'https://github.com/Oleksii-Ivaniuta/NextGen-Crew-JS-Team-Project/tree/main',
   },
 ];
 
@@ -74,7 +74,7 @@ function createProjectMarkup(elements) {
 }
 
 let index = 0;
-// Завантаження карток
+
 loadBtnEl.addEventListener('click', () => {
   const remainingProjects = projects.slice(index, index + 3);
   const currentItems = containerEl.querySelectorAll('.projects-item');
