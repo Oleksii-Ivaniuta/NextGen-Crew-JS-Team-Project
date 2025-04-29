@@ -1,7 +1,7 @@
 const projects = [
   {
-    img: './img/my-projects/energyflow_desc@1x.jpg',
-    img2x: './img/my-projects/energyflow_desc@2x.jpg',
+    img: `${import.meta.env.BASE_URL}/img/my-projects/energyflow_desc@1x.jpg`,
+    img2x: `${import.meta.env.BASE_URL}/img/my-projects/energyflow_desc@2x.jpg`,
     desc: 'React, JavaScript, Node JS, Git',
     subtitle: 'energy flow webservice',
     link: 'https://oleksii-ivaniuta.github.io/NextGen-Crew-JS-Team-Project/',
