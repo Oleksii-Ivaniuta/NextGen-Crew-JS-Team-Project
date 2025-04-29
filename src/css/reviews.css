@@ -1,6 +1,6 @@
 .reviews-section {
-  margin-top: 82px;
-  margin-bottom: 82px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .reviews-header {
   font-family: var(--second-family);
@@ -19,7 +19,17 @@
     line-height: 115%;
     letter-spacing: 0.02em;
   }
+  .reviews-section {
+  margin-top: 62px;
+  margin-bottom: 62px;
 }
+}
+@media screen and (min-width: 1280px) {
+  .reviews-section {
+  margin-top: 82px;
+  margin-bottom: 82px;
+}
+  }
 .swiper-container {
   overflow: hidden;
   position: relative;
